@@ -94,24 +94,24 @@ import { FwbModal } from 'flowbite-vue'
 
 ## Position
 
-The `position` prop allows you to control the placement of the modal on the screen. You can choose from the following options:
+The `position` prop allows you to control the placement of the modal on the screen, taking into account RTL (Right-to-Left) mode. You can choose from the following options:
 
-`bottom-left`, `bottom-right`, `bottom-center`, `top-left`, `top-center`, `top-right`, `center-left`, `center`, `center-right`
+`top-start`, `top-center`, `top-end`, `center-start`, `center`, `center-end`, `bottom-start`, `bottom-center`, `bottom-end`
 
 The default value is: `center`
 
 <fwb-modal-example-position />
 ```vue
 <template>
-  <fwb-modal position="bottom-left" />
-  <fwb-modal position="bottom-right" />
-  <fwb-modal position="bottom-center" />
-  <fwb-modal position="top-left" />
+  <fwb-modal position="top-start" />
   <fwb-modal position="top-center" />
-  <fwb-modal position="top-right" />
-  <fwb-modal position="center-left" />
+  <fwb-modal position="top-end" />
+  <fwb-modal position="center-start" />
   <fwb-modal position="center" />
-  <fwb-modal position="center-right" />
+  <fwb-modal position="center-end" />
+  <fwb-modal position="bottom-start" />
+  <fwb-modal position="bottom-center" />
+  <fwb-modal position="bottom-end" />
 </template>
 
 <script setup>

@@ -3,14 +3,14 @@
     <div class="fixed inset-0 z-40 bg-gray-900 bg-opacity-50 dark:bg-opacity-80" />
     <div
       ref="modalRef"
-      class="fixed top-0 left-0 right-0 z-50 grid w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full grid"
       tabindex="0"
       @click.self="clickOutside"
       @keyup.esc="closeWithEsc"
     >
       <div
         :class="`${modalSizeClasses[size]} ${modalPositionClasses[position]}`"
-        class="relative w-full p-4"
+        class="relative p-4 w-full"
       >
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -23,7 +23,7 @@
             <button
               v-if="!persistent"
               aria-label="close"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
               type="button"
               @click="closeModal"
             >
@@ -80,7 +80,7 @@ const props = withDefaults(defineProps<ModalProps>(), {
 })
 
 const emit = defineEmits(['close', 'click:outside'])
-const modalSizeClasses = {
+const modalSizeClasses: Record<ModalSize, string> = {
   xs: 'max-w-xs',
   sm: 'max-w-sm',
   md: 'max-w-md',
@@ -94,16 +94,16 @@ const modalSizeClasses = {
   '7xl': 'max-w-7xl',
 }
 
-const modalPositionClasses = {
-  'bottom-left': 'self-end justify-self-start',
-  'bottom-right': 'self-end justify-self-end',
-  'bottom-center': 'self-end justify-self-center',
-  'top-left': 'self-start justify-self-start',
-  'top-right': 'self-start justify-self-end',
+const modalPositionClasses: Record<ModalPosition, string> = {
+  'top-start': 'self-start justify-self-start',
   'top-center': 'self-start justify-self-center',
-  'center-left': 'self-center justify-self-start',
+  'top-end': 'self-start justify-self-end',
+  'center-start': 'self-center justify-self-start',
   center: 'self-center justify-self-center',
-  'center-right': 'self-center justify-self-end',
+  'center-end': 'self-center justify-self-end',
+  'bottom-start': 'self-end justify-self-start',
+  'bottom-center': 'self-end justify-self-center',
+  'bottom-end': 'self-end justify-self-end',
 }
 
 function closeModal () {

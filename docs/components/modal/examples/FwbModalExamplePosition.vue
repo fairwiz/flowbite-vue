@@ -2,26 +2,8 @@
   <div class="flex flex-wrap justify-start gap-2 vp-raw">
     <span>
       <fwb-modal-example
-        position="bottom-left"
-        trigger-text="Bottom Left"
-      />
-    </span>
-    <span>
-      <fwb-modal-example
-        position="bottom-right"
-        trigger-text="Bottom Right"
-      />
-    </span>
-    <span>
-      <fwb-modal-example
-        position="bottom-center"
-        trigger-text="Bottom Center"
-      />
-    </span>
-    <span>
-      <fwb-modal-example
-        position="top-left"
-        trigger-text="Top Left"
+        position="top-start"
+        trigger-text="Top Start"
       />
     </span>
     <span>
@@ -32,14 +14,14 @@
     </span>
     <span>
       <fwb-modal-example
-        position="top-right"
-        trigger-text="Top Right"
+        position="top-end"
+        trigger-text="Top End"
       />
     </span>
     <span>
       <fwb-modal-example
-        position="center-left"
-        trigger-text="Center Left"
+        position="center-start"
+        trigger-text="Center Start"
       />
     </span>
     <span>
@@ -50,8 +32,26 @@
     </span>
     <span>
       <fwb-modal-example
-        position="center-right"
-        trigger-text="Center Right"
+        position="center-end"
+        trigger-text="Center End"
+      />
+    </span>
+    <span>
+      <fwb-modal-example
+        position="bottom-start"
+        trigger-text="Bottom Start"
+      />
+    </span>
+    <span>
+      <fwb-modal-example
+        position="bottom-center"
+        trigger-text="Bottom Center"
+      />
+    </span>
+    <span>
+      <fwb-modal-example
+        position="bottom-end"
+        trigger-text="Bottom End"
       />
     </span>
   </div>

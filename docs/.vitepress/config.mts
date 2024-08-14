@@ -85,6 +85,7 @@ function getUtils() {
 
 function getTypography() {
   return [
+    { text: "Blockquote", link: '/components/blockquote' },
     { text: 'Heading', link: '/components/heading' },
     { text: 'Paragraph', link: '/components/paragraph' },
     { text: 'Image', link: '/components/image' },
@@ -98,7 +99,7 @@ function getTypography() {
  */
 export default defineConfig({
   title: 'Flowbite Vue 3',
-  cleanUrls: 'without-subfolders',
+  cleanUrls: true,
   head: [
     ['link', { rel: 'icon', type: 'image/svg', href: '/assets/logo.svg' }],
     [
